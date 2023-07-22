@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "beer-directory", "beer-directory\beer-directory.csproj", "{C8D33ABD-FB5A-4C2D-8D5D-97DD4BBA3DA9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BE9F3098-3527-43A6-ADFA-7680B17804D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerDirectory.Core", "BeerDirectory.Core\BeerDirectory.Core.csproj", "{D3890068-0ACC-49B0-9976-BB79CBB3BA99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerDirectory.Core.Tests", "BeerDirectory.Core.Tests\BeerDirectory.Core.Tests.csproj", "{A6498CEA-0201-43A5-8A03-12E3EA41779B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8D33ABD-FB5A-4C2D-8D5D-97DD4BBA3DA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D33ABD-FB5A-4C2D-8D5D-97DD4BBA3DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D33ABD-FB5A-4C2D-8D5D-97DD4BBA3DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8D33ABD-FB5A-4C2D-8D5D-97DD4BBA3DA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3890068-0ACC-49B0-9976-BB79CBB3BA99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3890068-0ACC-49B0-9976-BB79CBB3BA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3890068-0ACC-49B0-9976-BB79CBB3BA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3890068-0ACC-49B0-9976-BB79CBB3BA99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6498CEA-0201-43A5-8A03-12E3EA41779B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6498CEA-0201-43A5-8A03-12E3EA41779B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6498CEA-0201-43A5-8A03-12E3EA41779B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6498CEA-0201-43A5-8A03-12E3EA41779B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D3890068-0ACC-49B0-9976-BB79CBB3BA99} = {BE9F3098-3527-43A6-ADFA-7680B17804D9}
+		{A6498CEA-0201-43A5-8A03-12E3EA41779B} = {BE9F3098-3527-43A6-ADFA-7680B17804D9}
+	EndGlobalSection
+EndGlobal
