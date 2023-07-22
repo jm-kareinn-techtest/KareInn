@@ -10,7 +10,9 @@ namespace BeerDirectory.Core.Tests.Repositories
 	{
 		public BeerRepositoryTests()
 		{
-			_client = new BeerDirectoryMongoClient("mongodb://localhost:27017", "beer-integ-tests");
+			// Connection string change required to make tests pass locally. 
+			//_client = new BeerDirectoryMongoClient("mongodb://localhost:27017", "beer-integ-tests");
+			_client = new BeerDirectoryMongoClient("mongodb://root:example@localhost:27017", "beer-integ-tests");
 			_repository = new BeerRepository(_client);
 		}
 		
