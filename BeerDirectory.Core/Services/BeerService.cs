@@ -7,34 +7,42 @@ using BeerDirectory.Core.Services.Models;
 
 namespace BeerDirectory.Core.Services
 {
-	public class BeerService : ApplicationModelService<BeerModel, Beer, BeerModelFilter, IBeerFilter>, IBeerService
-	{
-		private readonly IBeerRepository _repository;
-		
-		public BeerService(IBeerRepository repository) : base(repository)
-		{
-			_repository = repository;
-		}
+    public class BeerService : ApplicationModelService<BeerModel, Beer, BeerModelFilter, IBeerFilter>, IBeerService
+    {
+        private readonly IBeerRepository _repository;
+        
+        public BeerService(IBeerRepository repository) : base(repository)
+        {
+            _repository = repository;
+        }
 
-		public override BeerModel ConvertEntityToModel(Beer entity)
-		{
-			return (BeerModel) entity;
-		}
+        public override BeerModel ConvertEntityToModel(Beer entity)
+        {
+            return (BeerModel) entity;
+        }
 
-		public BeerModel Add(BeerModel model)
-		{
-			var beer = new Beer.Builder()
-				.WithId(Guid.NewGuid())
-				.WithName(model.Name)
-				.WithBrewer(model.Brewer)
-				.WithAlcohol(model.AlcoholByVolume)
-				.WithStyle(model.Style)
-				.Build();
+        public BeerModel Add(BeerModel model)
+        {
+            var beer = new Beer.Builder()
+                .WithId(Guid.NewGuid())
+                .WithName(model.Name)
+                .WithBrewer(model.Brewer)
+                .WithAlcohol(model.AlcoholByVolume)
+                .WithStyle(model.Style)
+                .Build();
 
-			_repository.Add(beer);
-			_repository.SaveChanges();
+            _repository.Add(beer);
+            _repository.SaveChanges();
 
-			return ConvertEntityToModel(beer);
-		}
-	}
+            return ConvertEntityToModel(beer);
+        }
+
+        protected override void MapFilter(BeerModelFilter applicationModelFilter, IBeerFilter entityFilter)
+        {
+            base.MapFilter(applicationModelFilter, entityFilter);
+
+            entityFilter.SearchTerms = applicationModelFilter.SearchTerms;
+            entityFilter.Style = applicationModelFilter.Style;
+        }
+    }
 }
