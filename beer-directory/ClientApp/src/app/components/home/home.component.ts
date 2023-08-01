@@ -5,6 +5,13 @@ import { StyleService } from 'src/app/services/style.service';
 import { Beer } from '../../data/beer';
 import { SearchData } from '../search/search.component';
 
+/*
+ * Notes: This uses a rather naive method of state control. Ideally, this would be handled in a better way, such 
+ * as using ngRx stores and events and the reducer pattern. I've opted to take the naive approach partly for time
+ * reasons, and partly because I'm somewhat rusty with my angular and don't fully remember the implementation details
+ * of ngRx. 
+ */
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

@@ -15,7 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
     HomeComponent,
     SearchComponent,
     SearchResultsComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
