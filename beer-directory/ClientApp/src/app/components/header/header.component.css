@@ -1,0 +1,9 @@
+header {
+    text-align: left;
+}
+
+@media (max-width: 1200px) {
+    header {
+        text-align:center;
+    }
+}

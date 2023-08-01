@@ -1,16 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+body {
+  background: #FEF4E8;
+  color: #232323;
 }
 
-code {
-  color: #e01a76;
+a, h1, h2, h3, .btn-link {
+  color: #940342;
+}
+
+a:hover, a:focus, .btn-link:hover, .btn-link:focus {
+  color: #760234;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  background:  #940342;
+  border-color: #940342;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background: #760234;
 }
