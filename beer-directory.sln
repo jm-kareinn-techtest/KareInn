@@ -1,12 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "beer-directory", "beer-directory\beer-directory.csproj", "{C8D33ABD-FB5A-4C2D-8D5D-97DD4BBA3DA9}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.33913.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "beer-directory", "beer-directory\beer-directory.csproj", "{C8D33ABD-FB5A-4C2D-8D5D-97DD4BBA3DA9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BE9F3098-3527-43A6-ADFA-7680B17804D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerDirectory.Core", "BeerDirectory.Core\BeerDirectory.Core.csproj", "{D3890068-0ACC-49B0-9976-BB79CBB3BA99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeerDirectory.Core", "BeerDirectory.Core\BeerDirectory.Core.csproj", "{D3890068-0ACC-49B0-9976-BB79CBB3BA99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerDirectory.Core.Tests", "BeerDirectory.Core.Tests\BeerDirectory.Core.Tests.csproj", "{A6498CEA-0201-43A5-8A03-12E3EA41779B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeerDirectory.Core.Tests", "BeerDirectory.Core.Tests\BeerDirectory.Core.Tests.csproj", "{A6498CEA-0201-43A5-8A03-12E3EA41779B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "beer-directory.Tests.Integration", "beer-directory.Tests.Integration\beer-directory.Tests.Integration.csproj", "{2F9FDEF1-CF5E-490E-ADF8-4EA7B39263E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +31,13 @@ Global
 		{A6498CEA-0201-43A5-8A03-12E3EA41779B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6498CEA-0201-43A5-8A03-12E3EA41779B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6498CEA-0201-43A5-8A03-12E3EA41779B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F9FDEF1-CF5E-490E-ADF8-4EA7B39263E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F9FDEF1-CF5E-490E-ADF8-4EA7B39263E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F9FDEF1-CF5E-490E-ADF8-4EA7B39263E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F9FDEF1-CF5E-490E-ADF8-4EA7B39263E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D3890068-0ACC-49B0-9976-BB79CBB3BA99} = {BE9F3098-3527-43A6-ADFA-7680B17804D9}

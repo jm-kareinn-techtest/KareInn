@@ -1,12 +1,14 @@
 ﻿using BeerDirectory.Core.Services.Filters;
 using BeerDirectory.Core.Services.Interfaces;
 using BeerDirectory.Core.Services.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace beer_directory.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[AllowAnonymous]
 public class BeersController : ControllerBase
 {
 	private readonly IBeerService _service;
