@@ -1,0 +1,11 @@
+
+<div class="input-group">
+    <input type="text" placeholder="Search..." [(ngModel)]="this.searchTerms" class="form-control">
+
+    <select [(ngModel)]="this.selectedStyle" class="form-select">
+        <option [ngValue]="-1">All Styles</option>
+        <option *ngFor="let style of styles" [ngValue]="style.value">{{style.displayName}}</option>
+    </select>
+
+    <button class="btn btn-primary" (click)="this.onSearch()">Search</button>
+</div>

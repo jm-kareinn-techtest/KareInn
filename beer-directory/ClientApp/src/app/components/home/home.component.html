@@ -1,1 +1,2 @@
 <app-header></app-header>
+<app-search [styles]="this.styles" (doSearch)="this.performSearch($event.searchTerms, $event.style)"></app-search>
