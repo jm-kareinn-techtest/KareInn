@@ -12,12 +12,22 @@ builder.Services.AddControllersWithViews();
 
 // connection
 builder.Services.AddSingleton<BeerDirectoryMongoClient, BeerDirectoryMongoClient>(_ =>
-	new BeerDirectoryMongoClient(builder.Configuration["Data:MongoClient:ConnectionString"],
-		builder.Configuration["Data:MongoClient:DbName"]));
+    new BeerDirectoryMongoClient(builder.Configuration["Data:MongoClient:ConnectionString"],
+        builder.Configuration["Data:MongoClient:DbName"]));
+
+#if DEBUG
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(corsBuilder =>
+    {
+        corsBuilder.AllowAnyOrigin();
+    });
+});
+#endif
 
 // repositories
 builder.Services.AddScoped<IBeerRepository, BeerRepository>();
-			
+            
 // services
 builder.Services.AddTransient<IBeerService, BeerService>();
 
@@ -26,20 +36,23 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-	app.UseHsts();
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
+#if DEBUG
+app.UseCors();
+#endif
 
 app.MapControllerRoute(
-	name: "default",
-	pattern: "{controller}/{action=Index}/{id?}");
+    name: "default",
+    pattern: "{controller}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("index.html");
-;
+
 
 app.Run();
