@@ -1,3 +1,17 @@
 <app-header></app-header>
 <app-search [styles]="this.styles" (doSearch)="this.performSearch($event.searchTerms, $event.style)"></app-search>
 <app-search-results [beers]="this.beers"></app-search-results>
+
+<div class="row mt-4" *ngIf="this.beers.length">
+    <div class="col">
+        <button class="btn btn-link" [disabled]="this.resultsStart <= 0" (click)="this.lastPage()">&lt; Previous</button>
+    </div>
+
+    <div class="col text-center">
+        Results {{ this.resultsStart + 1 }} - {{ this.resultsStart + this.beers.length }}
+    </div>
+
+    <div class="col text-end">
+        <button class="btn btn-link" [disabled]="this.resultsSize > this.beers.length" (click)="this.nextPage()">Next &gt;</button>
+    </div>
+</div>
