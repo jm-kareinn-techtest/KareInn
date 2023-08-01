@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './components/search/search.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
@@ -13,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
     AppComponent,
     HomeComponent
     SearchComponent,
+    SearchResultsComponent,
     HeaderComponent,
   ],
   imports: [
